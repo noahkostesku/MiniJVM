@@ -356,17 +356,17 @@ void jvm_run(minijvm* jvm)
                 exec_iinc(jvm, *(jvm->pc + 1), *(jvm->pc + 2));
                 jvm->pc += 2; 
                 break;
-            // case INST_IFEQ:
-            //     // offset = (jvm->pc[1] << 8) | jvm->pc[2];
-            //     offset = (signed char)jvm->pc[1];
-            //     exec_ifeq(jvm, offset); 
-            //     jvm->pc += 2; 
-            //     break;
-            // case INST_GOTO:
-            //     //bitwise operation to convert to integer
-            //     offset = (jvm->pc[1] << 8) | jvm->pc[2];
-            //     exec_goto(jvm, offset);  
-            //     break;
+            case INST_IFEQ:
+                // offset = (jvm->pc[1] << 8) | jvm->pc[2];
+                offset = (signed char)jvm->pc[1];
+                exec_ifeq(jvm, offset); 
+                jvm->pc += 2; 
+                break;
+            case INST_GOTO:
+                //bitwise operation to convert to integer
+                offset = (jvm->pc[1] << 8) | jvm->pc[2];
+                exec_goto(jvm, offset);  
+                break;
             default:
                 //default case: unknown, set the error value to 1 as per instructions and terminate the program
                 jvm->return_value = 1; 
