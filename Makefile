@@ -1,4 +1,3 @@
-#MakeFile: Assignment 5 Part 1
 #Author: Noah Kostesku
 
 #Detect the operating system
