@@ -1,0 +1,23 @@
+bipush 0
+dup
+istore 0
+istore 1
+iload 1
+bipush 1
+iadd
+dup
+istore 1
+iload 0
+iload 1
+iadd
+istore 0
+bipush 4
+isub
+ifeq 6
+goto -21
+iload 0
+iprint
+pop
+return
+
+

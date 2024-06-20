@@ -1,0 +1,5 @@
+bipush 5
+bipush -3
+iadd
+iprint
+return

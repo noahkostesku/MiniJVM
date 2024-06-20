@@ -1,0 +1,8 @@
+bipush 47
+bipush 5
+irem
+iprint
+iconst_0
+irem
+iprint
+return

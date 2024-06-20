@@ -1,0 +1,9 @@
+bipush 25
+bipush 2
+ishr
+iprint
+bipush -128
+bipush 5
+ishr
+iprint
+return

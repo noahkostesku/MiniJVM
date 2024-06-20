@@ -1,0 +1,21 @@
+bipush 1
+istore 1
+bipush 2
+istore 2
+bipush 3
+istore 3
+iinc 3 127
+iinc 2 -50
+iinc 1 2
+iload 1
+iprint
+iload 2
+iprint
+iload 3
+iprint
+iinc 2 -1
+iload 2
+iprint
+return
+
+

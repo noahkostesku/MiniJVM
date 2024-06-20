@@ -1,0 +1,10 @@
+bipush 5
+iprint
+bipush 1
+isub
+dup
+ifeq 6
+goto -8
+iprint
+return
+
